@@ -1,0 +1,12 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+POST        /lgtm                controllers.Application.lgtm
+POST        /weather             controllers.Application.weather
+POST        /weather/forecast    controllers.Application.weatherForecast
+POST        /localtime           controllers.Application.localtime
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file        controllers.Assets.at(path="/public", file)

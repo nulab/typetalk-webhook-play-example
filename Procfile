@@ -1,0 +1,1 @@
+web: target/universal/stage/bin/typetalk-bots -Dhttp.port=${PORT} -Dconfig.resource=prod.conf
