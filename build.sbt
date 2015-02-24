@@ -1,4 +1,4 @@
-name := "typetalk-bots"
+name := "typetalk-webhook-play-example"
 
 version := "1.0-SNAPSHOT"
 

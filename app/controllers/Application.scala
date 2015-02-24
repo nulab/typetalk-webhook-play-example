@@ -58,10 +58,8 @@ object Application extends Controller {
       val post = json \ "post"
       val postId = (post \ "id").as[Long]
       val q = (post \ "message").as[String].replaceAll("@[-\\w]+\\+", "").trim
-
       WS.url(s"http://api.openweathermap.org/data/2.5/forecast/daily").withQueryString("q" -> q).get().map { response =>
         val json = response.json
-
         val message = if (json \ "cod" == JsString("200")) {
           val cityJson = (json \ "city")
           val start = "In " + (cityJson \ "name").as[String] + ", " + (cityJson \ "country").as[String] + "\n"

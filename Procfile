@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/typetalk-bots -Dhttp.port=${PORT} -Dconfig.resource=prod.conf
+web: target/universal/stage/bin/typetalk-webhook-play-example -Dhttp.port=${PORT} -Dconfig.resource=prod.conf
